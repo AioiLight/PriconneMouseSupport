@@ -52,5 +52,10 @@ namespace PriconneMouseSupport
 
         private string _LabelTitle;
         private Functions _Functions;
+
+        private void ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _Functions = (Functions)ComboBox.SelectedIndex;
+        }
     }
 }

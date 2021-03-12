@@ -55,6 +55,7 @@ namespace PriconneMouseSupport
             this.ComboBox.Name = "ComboBox";
             this.ComboBox.Size = new System.Drawing.Size(300, 23);
             this.ComboBox.TabIndex = 1;
+            this.ComboBox.SelectedIndexChanged += new System.EventHandler(this.ComboBox_SelectedIndexChanged);
             // 
             // MouseButton
             // 
