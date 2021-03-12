@@ -73,7 +73,7 @@ namespace PriconneMouseSupport
             TaskDialog.ShowDialog(this,
                 new TaskDialogPage()
                 {
-                    Text = "Saved!",
+                    Text = Properties.Resources.Saved,
                 }, TaskDialogStartupLocation.CenterOwner);
         }
 
@@ -84,7 +84,7 @@ namespace PriconneMouseSupport
                 TaskDialog.ShowDialog(this,
                 new TaskDialogPage()
                 {
-                    Text = "Priconne is not opened!",
+                    Text = Properties.Resources._404,
                     Icon = TaskDialogIcon.Error,
                 }, TaskDialogStartupLocation.CenterOwner);
                 return;

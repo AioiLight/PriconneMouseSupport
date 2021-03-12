@@ -61,6 +61,16 @@ namespace PriconneMouseSupport.Properties {
         }
         
         /// <summary>
+        ///   Priconne is not found!
+        ///This app needs opening after Priconne. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string _404 {
+            get {
+                return ResourceManager.GetString("404", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Press &quot;AUTO&quot; button に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string Auto {
@@ -84,6 +94,15 @@ namespace PriconneMouseSupport.Properties {
         internal static string Menu {
             get {
                 return ResourceManager.GetString("Menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Settings have been saved! に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string Saved {
+            get {
+                return ResourceManager.GetString("Saved", resourceCulture);
             }
         }
         

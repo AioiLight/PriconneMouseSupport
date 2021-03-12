@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="404" xml:space="preserve">
+    <value>Priconne is not found!
+This app needs opening after Priconne.</value>
+  </data>
   <data name="Auto" xml:space="preserve">
     <value>Press "AUTO" button</value>
   </data>
@@ -125,6 +129,9 @@
   </data>
   <data name="Menu" xml:space="preserve">
     <value>Press "MENU" button</value>
+  </data>
+  <data name="Saved" xml:space="preserve">
+    <value>Settings have been saved!</value>
   </data>
   <data name="Speed" xml:space="preserve">
     <value>Press speed button</value>
