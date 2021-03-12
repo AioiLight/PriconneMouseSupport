@@ -1,5 +1,8 @@
-﻿using Gma.System.MouseKeyHook;
+﻿using System;
+using System.Diagnostics;
+using System.Drawing;
 using System.Windows.Forms;
+using WindowsHook;
 
 namespace PriconneMouseSupport
 {
@@ -10,31 +13,45 @@ namespace PriconneMouseSupport
             InitializeComponent();
             GlobalHook = Hook.GlobalEvents();
 
-            GlobalHook.MouseClick += GlobalHook_MouseClick;
+            GlobalHook.MouseDownExt += GlobalHook_MouseClick;
+
+            PrincessConnectReDive = Priconne.GetPriconne();
         }
 
-        private void GlobalHook_MouseClick(object sender, MouseEventArgs e)
+        private void GlobalHook_MouseClick(object sender, MouseEventExtArgs e)
         {
-            if (e.Button == MouseButtons.Middle)
+            var p = PrincessConnectReDive;
+            if (e.Button == WindowsHook.MouseButtons.Middle)
             {
-                MessageBox.Show("中");
+                ClickConnect(p, Priconne.GetPointFromFunctions(Middle.Functions));
             }
-            else if (e.Button == MouseButtons.XButton1)
+            else if (e.Button == WindowsHook.MouseButtons.XButton1)
             {
-                MessageBox.Show("後");
+                ClickConnect(p, Priconne.GetPointFromFunctions(Back.Functions));
             }
-            else if (e.Button == MouseButtons.XButton2)
+            else if (e.Button == WindowsHook.MouseButtons.XButton2)
             {
-                MessageBox.Show("前");
+                ClickConnect(p, Priconne.GetPointFromFunctions(Forward.Functions));
+            }
+        }
+
+        private void ClickConnect(Process process, Point point)
+        {
+            var p = Priconne.CalcPosition(process, point);
+            Debug.WriteLine(p);
+            if (p.HasValue)
+            {
+                Windows.ClickAndBack(new Point(p.Value.X, p.Value.Y));
             }
         }
 
         ~Main()
         {
-            GlobalHook.MouseClick -= GlobalHook_MouseClick;
+            GlobalHook.MouseDownExt -= GlobalHook_MouseClick;
             GlobalHook?.Dispose();
         }
 
         private readonly IKeyboardMouseEvents GlobalHook;
+        private readonly Process PrincessConnectReDive;
     }
 }
