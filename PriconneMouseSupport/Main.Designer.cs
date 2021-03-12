@@ -71,6 +71,7 @@ namespace PriconneMouseSupport
             this.Button_Save.TabIndex = 3;
             this.Button_Save.Text = "Save settings";
             this.Button_Save.UseVisualStyleBackColor = true;
+            this.Button_Save.Click += new System.EventHandler(this.Button_Save_Click);
             // 
             // CheckBox_Active
             // 

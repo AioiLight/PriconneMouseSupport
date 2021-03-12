@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
+using System.Reflection;
+using System.Text;
+using System.Text.Json;
 using System.Windows.Forms;
 using WindowsHook;
 
@@ -16,6 +20,24 @@ namespace PriconneMouseSupport
             GlobalHook.MouseDownExt += GlobalHook_MouseClick;
 
             PrincessConnectReDive = Priconne.GetPriconne();
+
+            var baseDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            SettingsPath = Path.Combine(baseDir, @"Settings.json");
+            if (File.Exists(SettingsPath))
+            {
+                // 設定反映
+                var s = JsonSerializer.Deserialize<Settings>(File.ReadAllText(SettingsPath, Encoding.UTF8));
+                Middle.Functions = s.Middle;
+                Forward.Functions = s.Forward;
+                Back.Functions = s.Back;
+                CheckBox_Active.Checked = s.Active;
+            }
+        }
+
+        ~Main()
+        {
+            GlobalHook.MouseDownExt -= GlobalHook_MouseClick;
+            GlobalHook?.Dispose();
         }
 
         private void GlobalHook_MouseClick(object sender, MouseEventExtArgs e)
@@ -33,6 +55,26 @@ namespace PriconneMouseSupport
             {
                 ClickConnect(p, Priconne.GetPointFromFunctions(Forward.Functions));
             }
+        }
+
+        private void Button_Save_Click(object sender, EventArgs e)
+        {
+            var s = new Settings()
+            {
+                Middle = Middle.Functions,
+                Forward = Forward.Functions,
+                Back = Back.Functions,
+                Active= CheckBox_Active.Checked
+            };
+
+            var json = JsonSerializer.Serialize(s);
+            File.WriteAllText(SettingsPath, json);
+
+            TaskDialog.ShowDialog(this,
+                new TaskDialogPage()
+                {
+                    Text = "Saved!",
+                }, TaskDialogStartupLocation.CenterOwner);
         }
 
         private void ClickConnect(Process process, Point point)
@@ -53,13 +95,8 @@ namespace PriconneMouseSupport
             }
         }
 
-        ~Main()
-        {
-            GlobalHook.MouseDownExt -= GlobalHook_MouseClick;
-            GlobalHook?.Dispose();
-        }
-
         private readonly IKeyboardMouseEvents GlobalHook;
         private readonly Process PrincessConnectReDive;
+        private readonly string SettingsPath;
     }
 }
