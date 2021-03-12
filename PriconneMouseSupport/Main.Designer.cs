@@ -39,23 +39,23 @@ namespace PriconneMouseSupport
             // 
             // Middle
             // 
-            resources.ApplyResources(this.Middle, "Middle");
             this.Middle.Functions = PriconneMouseSupport.Functions.Menu;
             this.Middle.LabelTitle = "中クリック:";
+            resources.ApplyResources(this.Middle, "Middle");
             this.Middle.Name = "Middle";
             // 
             // Forward
             // 
-            resources.ApplyResources(this.Forward, "Forward");
             this.Forward.Functions = PriconneMouseSupport.Functions.Auto;
             this.Forward.LabelTitle = "進むボタン:";
+            resources.ApplyResources(this.Forward, "Forward");
             this.Forward.Name = "Forward";
             // 
             // Back
             // 
-            resources.ApplyResources(this.Back, "Back");
             this.Back.Functions = PriconneMouseSupport.Functions.Back;
             this.Back.LabelTitle = "戻るボタン:";
+            resources.ApplyResources(this.Back, "Back");
             this.Back.Name = "Back";
             // 
             // Button_Save
