@@ -79,9 +79,20 @@ namespace PriconneMouseSupport
 
         private void ClickConnect(Process process, Point point)
         {
+            if (process == null)
+            {
+                TaskDialog.ShowDialog(this,
+                new TaskDialogPage()
+                {
+                    Text = "Priconne is not opened!",
+                    Icon = TaskDialogIcon.Error,
+                }, TaskDialogStartupLocation.CenterOwner);
+                return;
+            }
+
             if (CheckBox_Active.Checked)
             {
-                if (!Windows.IsActiveWindow(PrincessConnectReDive))
+                if (!Windows.IsActiveWindow(process))
                 {
                     return;
                 }

@@ -57,4 +57,144 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing.Primitives" name="System.Drawing.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="CheckBox_Active.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>12, 180</value>
+  </data>
+  <data name="&gt;&gt;Forward.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>320, 320</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>312, 289</value>
+  </data>
+  <assembly alias="System.Private.CoreLib" name="System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
+  <data name="CheckBox_Active.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>4</value>
+  </data>
+  <data name="Back.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>12, 124</value>
+  </data>
+  <data name="Forward.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>12, 68</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_Active.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Button_Save.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="&gt;&gt;Button_Save.Name" xml:space="preserve">
+    <value>Button_Save</value>
+  </data>
+  <data name="Middle.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>288, 50</value>
+  </data>
+  <data name="&gt;&gt;Back.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Middle.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Button_Save.Text" xml:space="preserve">
+    <value>Save settings</value>
+  </data>
+  <data name="&gt;&gt;Middle.Type" xml:space="preserve">
+    <value>PriconneMouseSupport.MouseButton, PriconneMouseSupport, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>320, 320</value>
+  </data>
+  <data name="&gt;&gt;Forward.Type" xml:space="preserve">
+    <value>PriconneMouseSupport.MouseButton, PriconneMouseSupport, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Button_Save.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="CheckBox_Active.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>178, 19</value>
+  </data>
+  <data name="&gt;&gt;Back.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Button_Save.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>12, 254</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Forward.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>1</value>
+  </data>
+  <data name="Button_Save.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>100, 23</value>
+  </data>
+  <data name="CheckBox_Active.Text" xml:space="preserve">
+    <value>Only when Priconne is active</value>
+  </data>
+  <data name="&gt;&gt;Back.Type" xml:space="preserve">
+    <value>PriconneMouseSupport.MouseButton, PriconneMouseSupport, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Button_Save.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CheckBox_Active.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>PriconneMouseSupport</value>
+  </data>
+  <data name="Middle.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing.Primitives">
+    <value>7, 15</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_Active.Name" xml:space="preserve">
+    <value>CheckBox_Active</value>
+  </data>
+  <data name="Middle.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>12, 12</value>
+  </data>
+  <data name="&gt;&gt;Back.Name" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Back.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>288, 50</value>
+  </data>
+  <data name="Forward.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>288, 50</value>
+  </data>
+  <data name="&gt;&gt;Middle.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="Back.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_Active.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Forward.Name" xml:space="preserve">
+    <value>Forward</value>
+  </data>
+  <data name="Button_Save.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;Middle.Name" xml:space="preserve">
+    <value>Middle</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_Active.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Forward.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
 </root>

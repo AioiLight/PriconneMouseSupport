@@ -29,6 +29,7 @@ namespace PriconneMouseSupport
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.Middle = new PriconneMouseSupport.MouseButton();
             this.Forward = new PriconneMouseSupport.MouseButton();
             this.Back = new PriconneMouseSupport.MouseButton();
@@ -38,67 +39,50 @@ namespace PriconneMouseSupport
             // 
             // Middle
             // 
+            resources.ApplyResources(this.Middle, "Middle");
             this.Middle.Functions = PriconneMouseSupport.Functions.Menu;
-            this.Middle.LabelTitle = "Middle Click:";
-            this.Middle.Location = new System.Drawing.Point(12, 12);
+            this.Middle.LabelTitle = "中クリック:";
             this.Middle.Name = "Middle";
-            this.Middle.Size = new System.Drawing.Size(288, 50);
-            this.Middle.TabIndex = 0;
             // 
             // Forward
             // 
+            resources.ApplyResources(this.Forward, "Forward");
             this.Forward.Functions = PriconneMouseSupport.Functions.Auto;
-            this.Forward.LabelTitle = "Forward button:";
-            this.Forward.Location = new System.Drawing.Point(12, 68);
+            this.Forward.LabelTitle = "進むボタン:";
             this.Forward.Name = "Forward";
-            this.Forward.Size = new System.Drawing.Size(288, 50);
-            this.Forward.TabIndex = 1;
             // 
             // Back
             // 
+            resources.ApplyResources(this.Back, "Back");
             this.Back.Functions = PriconneMouseSupport.Functions.Back;
-            this.Back.LabelTitle = "Back button:";
-            this.Back.Location = new System.Drawing.Point(12, 124);
+            this.Back.LabelTitle = "戻るボタン:";
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(288, 50);
-            this.Back.TabIndex = 2;
             // 
             // Button_Save
             // 
-            this.Button_Save.Location = new System.Drawing.Point(12, 254);
+            resources.ApplyResources(this.Button_Save, "Button_Save");
             this.Button_Save.Name = "Button_Save";
-            this.Button_Save.Size = new System.Drawing.Size(100, 23);
-            this.Button_Save.TabIndex = 3;
-            this.Button_Save.Text = "Save settings";
             this.Button_Save.UseVisualStyleBackColor = true;
             this.Button_Save.Click += new System.EventHandler(this.Button_Save_Click);
             // 
             // CheckBox_Active
             // 
-            this.CheckBox_Active.AutoSize = true;
-            this.CheckBox_Active.Location = new System.Drawing.Point(12, 180);
+            resources.ApplyResources(this.CheckBox_Active, "CheckBox_Active");
             this.CheckBox_Active.Name = "CheckBox_Active";
-            this.CheckBox_Active.Size = new System.Drawing.Size(178, 19);
-            this.CheckBox_Active.TabIndex = 4;
-            this.CheckBox_Active.Text = "Only when Priconne is active";
             this.CheckBox_Active.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 289);
             this.Controls.Add(this.CheckBox_Active);
             this.Controls.Add(this.Button_Save);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.Forward);
             this.Controls.Add(this.Middle);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(320, 320);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(320, 320);
             this.Name = "Main";
-            this.Text = "PriconneMouseSupport";
             this.ResumeLayout(false);
             this.PerformLayout();
 
