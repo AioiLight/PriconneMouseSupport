@@ -32,6 +32,7 @@ namespace PriconneMouseSupport
             this.Middle = new PriconneMouseSupport.MouseButton();
             this.Forward = new PriconneMouseSupport.MouseButton();
             this.Back = new PriconneMouseSupport.MouseButton();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Middle
@@ -61,11 +62,22 @@ namespace PriconneMouseSupport
             this.Back.Size = new System.Drawing.Size(288, 50);
             this.Back.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(154, 214);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(312, 289);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.Forward);
             this.Controls.Add(this.Middle);
@@ -84,6 +96,7 @@ namespace PriconneMouseSupport
         private MouseButton Middle;
         private MouseButton Forward;
         private MouseButton Back;
+        private System.Windows.Forms.Button button1;
     }
 }
 
