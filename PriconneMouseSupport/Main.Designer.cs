@@ -32,6 +32,8 @@ namespace PriconneMouseSupport
             this.Middle = new PriconneMouseSupport.MouseButton();
             this.Forward = new PriconneMouseSupport.MouseButton();
             this.Back = new PriconneMouseSupport.MouseButton();
+            this.Button_Save = new System.Windows.Forms.Button();
+            this.CheckBox_Active = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // Middle
@@ -61,11 +63,32 @@ namespace PriconneMouseSupport
             this.Back.Size = new System.Drawing.Size(288, 50);
             this.Back.TabIndex = 2;
             // 
+            // Button_Save
+            // 
+            this.Button_Save.Location = new System.Drawing.Point(12, 254);
+            this.Button_Save.Name = "Button_Save";
+            this.Button_Save.Size = new System.Drawing.Size(100, 23);
+            this.Button_Save.TabIndex = 3;
+            this.Button_Save.Text = "Save settings";
+            this.Button_Save.UseVisualStyleBackColor = true;
+            // 
+            // CheckBox_Active
+            // 
+            this.CheckBox_Active.AutoSize = true;
+            this.CheckBox_Active.Location = new System.Drawing.Point(12, 180);
+            this.CheckBox_Active.Name = "CheckBox_Active";
+            this.CheckBox_Active.Size = new System.Drawing.Size(178, 19);
+            this.CheckBox_Active.TabIndex = 4;
+            this.CheckBox_Active.Text = "Only when Priconne is active";
+            this.CheckBox_Active.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(312, 289);
+            this.Controls.Add(this.CheckBox_Active);
+            this.Controls.Add(this.Button_Save);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.Forward);
             this.Controls.Add(this.Middle);
@@ -76,6 +99,7 @@ namespace PriconneMouseSupport
             this.Name = "Main";
             this.Text = "PriconneMouseSupport";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -85,6 +109,8 @@ namespace PriconneMouseSupport
         private MouseButton Forward;
         private MouseButton Back;
         private System.Windows.Forms.Label abe;
+        private System.Windows.Forms.Button Button_Save;
+        private System.Windows.Forms.CheckBox CheckBox_Active;
     }
 }
 

@@ -37,6 +37,14 @@ namespace PriconneMouseSupport
 
         private void ClickConnect(Process process, Point point)
         {
+            if (CheckBox_Active.Checked)
+            {
+                if (!Windows.IsActiveWindow(PrincessConnectReDive))
+                {
+                    return;
+                }
+            }
+
             var p = Priconne.CalcPosition(process, point);
             Debug.WriteLine(p);
             if (p.HasValue)

@@ -75,5 +75,14 @@ namespace PriconneMouseSupport
             var p = Process.GetProcesses();
             return p.FirstOrDefault(n => n.MainWindowTitle == title);
         }
+
+        [DllImport("user32.dll")]
+        static extern IntPtr GetForegroundWindow();
+
+        internal static bool IsActiveWindow(Process process)
+        {
+            var g = GetForegroundWindow();
+            return g == process.MainWindowHandle;
+        }
     }
 }
