@@ -130,6 +130,9 @@
   <data name="Menu" xml:space="preserve">
     <value>"MENU" ボタンを押す</value>
   </data>
+  <data name="None" xml:space="preserve">
+    <value>なし</value>
+  </data>
   <data name="Saved" xml:space="preserve">
     <value>設定は保存されました！</value>
   </data>

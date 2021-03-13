@@ -77,7 +77,7 @@ namespace PriconneMouseSupport
                 }, TaskDialogStartupLocation.CenterOwner);
         }
 
-        private void ClickConnect(Process process, Point point)
+        private void ClickConnect(Process process, Point? point)
         {
             if (process == null)
             {

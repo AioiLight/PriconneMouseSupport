@@ -98,6 +98,15 @@ namespace PriconneMouseSupport.Properties {
         }
         
         /// <summary>
+        ///   None に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string None {
+            get {
+                return ResourceManager.GetString("None", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Settings have been saved! に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string Saved {

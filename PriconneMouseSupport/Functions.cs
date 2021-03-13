@@ -2,6 +2,7 @@
 {
     public enum Functions
     {
+        None,
         Menu,
         Back,
         Auto,

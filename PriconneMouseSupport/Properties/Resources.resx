@@ -130,6 +130,9 @@ This app needs opening after Priconne.</value>
   <data name="Menu" xml:space="preserve">
     <value>Press "MENU" button</value>
   </data>
+  <data name="None" xml:space="preserve">
+    <value>None</value>
+  </data>
   <data name="Saved" xml:space="preserve">
     <value>Settings have been saved!</value>
   </data>

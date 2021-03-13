@@ -6,6 +6,7 @@
         {
             return new string[]
             {
+                Properties.Resources.None,
                 Properties.Resources.Menu,
                 Properties.Resources.Back,
                 Properties.Resources.Auto,

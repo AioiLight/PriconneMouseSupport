@@ -14,7 +14,7 @@ namespace PriconneMouseSupport
 
         internal static string Title = "PrincessConnectReDive";
 
-        internal static Point GetPointFromFunctions(Functions functions)
+        internal static Point? GetPointFromFunctions(Functions functions)
         {
             return functions switch
             {
@@ -22,7 +22,7 @@ namespace PriconneMouseSupport
                 Functions.Back => Back,
                 Functions.Auto => Auto,
                 Functions.Speed => Speed,
-                _ => Back
+                _ => null
             };
         }
 
@@ -31,19 +31,19 @@ namespace PriconneMouseSupport
             return Windows.GetWindowProcessFromString(Title);
         }
 
-        internal static Point? CalcPosition(Process priconne, Point point)
+        internal static Point? CalcPosition(Process priconne, Point? point)
         {
             var priconneWindow = Windows.GetWindowClientSize(priconne);
 
             Debug.WriteLine(priconneWindow);
 
-            if (priconneWindow.HasValue)
+            if (priconneWindow.HasValue && point.HasValue)
             {
                 var widthRate = 1.0 * priconneWindow.Value.Width / WindowSize.Width;
                 var heightRate = 1.0 * priconneWindow.Value.Height / WindowSize.Height;
 
-                var x = point.X * widthRate;
-                var y = point.Y * heightRate;
+                var x = point.Value.X * widthRate;
+                var y = point.Value.Y * heightRate;
 
                 return Windows.GetScreenPosition(priconne, new Point((int)x, (int)y));
             }
