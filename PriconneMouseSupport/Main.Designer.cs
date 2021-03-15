@@ -81,7 +81,6 @@ namespace PriconneMouseSupport
             this.Controls.Add(this.Forward);
             this.Controls.Add(this.Middle);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Main";
             this.ResumeLayout(false);
             this.PerformLayout();
