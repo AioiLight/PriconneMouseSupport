@@ -21,7 +21,7 @@ namespace PriconneMouseSupport
 
             PrincessConnectReDive = Priconne.GetPriconne();
 
-            var baseDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            var baseDir = Path.GetDirectoryName(AppContext.BaseDirectory);
             SettingsPath = Path.Combine(baseDir, @"Settings.json");
             if (File.Exists(SettingsPath))
             {
